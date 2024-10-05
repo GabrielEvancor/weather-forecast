@@ -2,6 +2,7 @@ import { useState, useRef } from 'react'
 import axios from 'axios'
 import './App.css'
 import WeatherInformations from './components/WeatherInformations/WeatherInformations'
+import WeatherInformations5Days from './components/WeatherInformations5Days/WeatherInformations5Days'
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
       <button onClick={searchCity}>Buscar</button>
 
       {weather && <WeatherInformations weather={weather} />}
-      
+      {weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
     </div>
   )
 }
